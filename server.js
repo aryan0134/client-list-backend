@@ -6,6 +6,7 @@ const casesRoutes = require('./routes/casesRoutes')
 const path = require('path')
 const root = require('./routes/root')
 const corsOptions = require('./corsOptions')
+const cookieSession = require("cookie-session");
 
 // Express App
 
