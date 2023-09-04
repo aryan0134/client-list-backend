@@ -1,5 +1,5 @@
 const allowedOrigins = [
-    'https://www.rcdso.in/'
+    'https://client-list-frontend.vercel.app/'
 ]
 
 module.exports = allowedOrigins
