@@ -49,6 +49,13 @@ app.use(
 	})
 );
 
+
+
+//Routes
+
+app.use('/', root)
+app.use('/api/cases', casesRoutes)
+
 app.all('*', (req, res) => {
     res.status(404)
     if (req.accepts('html')) {
@@ -59,13 +66,6 @@ app.all('*', (req, res) => {
         res.type('txt').send('404 Not Found')
     }
 })
-
-//Routes
-
-app.use('/', root)
-app.use('/api/cases', casesRoutes)
-
-
 //connecting to MongoDB
 
 mongoose.connect(db)
