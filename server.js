@@ -32,6 +32,7 @@ const corsOption = {
   };
   
 app.use(cors(corsOptions));
+app.use(cors(corsOption));
   
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'https://client-list-frontend.vercel.app/'); // Replace with your allowed origin(s)
