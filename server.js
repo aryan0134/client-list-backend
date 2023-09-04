@@ -5,6 +5,7 @@ const cors = require("cors");
 const casesRoutes = require('./routes/casesRoutes')
 const path = require('path')
 const root = require('./routes/root')
+const corsOptions = require('./corsOptions')
 
 // Express App
 
@@ -29,7 +30,7 @@ const corsOption = {
     allowedHeaders: ['Content-Type'],
   };
   
-app.use(cors(corsOption));
+app.use(cors(corsOptions));
   
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'https://client-list-frontend.vercel.app/'); // Replace with your allowed origin(s)
@@ -37,6 +38,14 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 });
+
+app.use(
+	cookieSession({
+		name: "session",
+		keys: ["cyberwolve"],
+		maxAge: 24 * 60 * 60 * 100,
+	})
+);
 
 app.all('*', (req, res) => {
     res.status(404)
