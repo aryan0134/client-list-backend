@@ -31,7 +31,7 @@ const corsOption = {
     allowedHeaders: ['Content-Type'],
   };
   
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(cors(corsOption));
   
 app.use((req, res, next) => {
