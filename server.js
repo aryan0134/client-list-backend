@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 })
 
 const corsOption = {
-    origin: 'https://client-list-frontend.vercel.app//', // Replace with your frontend domain
+    origin: 'https://client-list-frontend.vercel.app/', // Replace with your frontend domain
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type'],
   };
