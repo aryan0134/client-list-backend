@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 const corsOption = {
     origin: 'https://client-list-frontend.vercel.app//', // Replace with your frontend domain
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type'],
   };
   
 app.use(cors(corsOption));
@@ -34,7 +34,7 @@ app.use(cors(corsOption));
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'https://client-list-frontend.vercel.app/'); // Replace with your allowed origin(s)
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 });
 
