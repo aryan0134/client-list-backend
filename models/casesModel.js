@@ -15,7 +15,6 @@ const casesSchema = new Schema({
     maritalStatus: {
         type: String,
         enum: ['single' , 'married' , 'separated' , 'divorced' , 'widow(er)' , 'other'],
-        required: true
     },
     visaType: {
         type: String,
@@ -33,101 +32,77 @@ const casesSchema = new Schema({
         required: true
     },
     dob:{
-        type: String,
-        required: true
+        type: String
     },
     placeOfBirth:{
-        type: String,
-        required: true
+        type: String
     },
     sex:{
         type: String,
-        enum: ['male' , 'female' ],
-        required: true
+        enum: ['male' , 'female' ]
     },
     address:{
-        type: String,
-        required: true
+        type: String
     },
     city:{
-        type: String,
-        required: true
+        type: String
     },
     state:{
-        type: String,
-        required: true
+        type: String
     },
     pincode:{
-        type: String,
-        required: true
+        type: String
     },
     phoneNumber:{
-        type: String,
-        required: true
+        type: String
     },
     passportNumber:{
-        type: String,
-        required: true
+        type: String
     },
     passportDateIssue:{
-        type: String,
-        required: true
+        type: String
     },
     passportDateExpiry:{
-        type: String,
-        required: true
+        type: String
     },
     tenthScore:{
-        type: String,
-        required: true
+        type: String
     },
     tenthScoreSchema:{
-        type: String,
-        required: true
+        type: String
     },
     tenthBoard:{
-        type: String,
-        required: true
+        type: String
     },
     tenthSchoolName:{
-        type: String,
-        required: true
+        type: String
     },
     tenthSchoolAddress:{
-        type: String,
-        required: true
+        type: String
     },
     tenthPassingDate:{
-        type: String,
-        required: true
+        type: String
     },
     twelthScore:{
-        type: String,
-        required: true
+        type: String
     },
     twelthScoreSchema:{
-        type: String,
-        required: true
+        type: String
     },
     twelthBoard:{
-        type: String,
-        required: true
+        type: String
     },
     twelthSchoolName:{
-        type: String,
-        required: true
+        type: String
     },
     twelthSchoolAddress:{
-        type: String,
-        required: true
+        type: String
     },
     twelthPassingDate:{
-        type: String,
-        required: true
+        type: String
     },
     workExperience:{
-        type: String,
-        required: true
+        type: String
     },
 
     
