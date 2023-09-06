@@ -104,6 +104,15 @@ const casesSchema = new Schema({
     workExperience:{
         type: String
     },
+    status:{
+        type: String
+    },
+    responsibility:{
+        type: String
+    },
+    remarks:{
+        type: String
+    }
 
     
 } , { timestamps: true });

@@ -27,11 +27,11 @@ const getClient = async (req, res) => {
 
 //POST a new client
 const createClients = async (req, res) => {
-    const {firstName,lastName,maritalStatus,visaType,office,caseStatus,dob,placeOfBirth,sex,address,city,state,pincode,phoneNumber,passportNumber,passportDateIssue,passportDateExpiry,tenthScore,tenthScoreSchema,tenthBoard,tenthSchoolName,tenthSchoolAddress,tenthPassingDate,twelthScore,twelthScoreSchema,twelthBoard,twelthSchoolName,twelthSchoolAddress,twelthPassingDate,workExperience} = req.body
+    const {firstName,lastName,maritalStatus,visaType,office,caseStatus,dob,placeOfBirth,sex,address,city,state,pincode,phoneNumber,passportNumber,passportDateIssue,passportDateExpiry,tenthScore,tenthScoreSchema,tenthBoard,tenthSchoolName,tenthSchoolAddress,tenthPassingDate,twelthScore,twelthScoreSchema,twelthBoard,twelthSchoolName,twelthSchoolAddress,twelthPassingDate,workExperience,status,responsibility,remarks} = req.body
 
 
     try{
-        const clients = await Cases.create({firstName,lastName,maritalStatus,visaType,office,caseStatus,dob,placeOfBirth,sex,address,city,state,pincode,phoneNumber,passportNumber,passportDateIssue,passportDateExpiry,tenthScore,tenthScoreSchema,tenthBoard,tenthSchoolName,tenthSchoolAddress,tenthPassingDate,twelthScore,twelthScoreSchema,twelthBoard,twelthSchoolName,twelthSchoolAddress,twelthPassingDate,workExperience})
+        const clients = await Cases.create({firstName,lastName,maritalStatus,visaType,office,caseStatus,dob,placeOfBirth,sex,address,city,state,pincode,phoneNumber,passportNumber,passportDateIssue,passportDateExpiry,tenthScore,tenthScoreSchema,tenthBoard,tenthSchoolName,tenthSchoolAddress,tenthPassingDate,twelthScore,twelthScoreSchema,twelthBoard,twelthSchoolName,twelthSchoolAddress,twelthPassingDate,workExperience,status,responsibility,remarks})
         res.status(200).json(clients)
     } catch(error){
         res.status(400).json({error: error.message})
