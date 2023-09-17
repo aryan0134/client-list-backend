@@ -56,7 +56,7 @@ app.use(
 
 app.use('/', root)
 app.use('/api/cases', casesRoutes)
-app.use('/api/toDO', toDoRoutes)
+app.use('/api/todo', toDoRoutes)
 
 app.all('*', (req, res) => {
     res.status(404)
