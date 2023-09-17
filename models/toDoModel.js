@@ -27,7 +27,7 @@ const toDoSchema = new Schema({
         enum: ['Low' , 'Medium' , 'High'],
         required: true
     },
-    Status: {
+    status: {
         type: String,
         enum: ['to do' , 'doing' , 'done'],
         required: true
