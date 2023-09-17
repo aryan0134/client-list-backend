@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const cors = require("cors");
 const casesRoutes = require('./routes/casesRoutes')
+const toDoRoutes = require('./routes/toDoRoutes')
 const path = require('path')
 const root = require('./routes/root')
 const corsOptions = require('./corsOptions')
@@ -55,6 +56,7 @@ app.use(
 
 app.use('/', root)
 app.use('/api/cases', casesRoutes)
+app.use('/api/toDO', toDoRoutes)
 
 app.all('*', (req, res) => {
     res.status(404)
